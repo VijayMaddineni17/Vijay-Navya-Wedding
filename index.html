@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vijay &amp; Navya — Wedding | Dec 23, 2026</title>
+<meta name="description" content="The wedding of Vijay Maddineni and Navya Bharathi Bikki — Wednesday, December 23, 2026, Dallas, Texas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Jost:wght@300;400;500;600&family=Noto+Serif+Telugu:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon:#7a1f2b;
+    --maroon-dark:#5c1420;
+    --mustard:#d9940d;
+    --gold:#c98a1b;
+    --cream:#fdf3d8;
+    --cream-2:#fffaf0;
+    --ink:#3d2b1f;
+    --green:#2e6b34;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Jost',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .te{font-family:'Noto Serif Telugu','Playfair Display',serif}
+
+  /* ---------- garland ---------- */
+  .garland{height:26px;overflow:hidden;background:var(--maroon);
+    background-image:radial-gradient(circle at 12px 13px,#f6a609 7px,#e07b00 8px,transparent 9px),
+                     radial-gradient(circle at 36px 13px,#f9c74f 6px,transparent 7px),
+                     radial-gradient(circle at 60px 13px,#f6a609 7px,#e07b00 8px,transparent 9px),
+                     radial-gradient(circle at 84px 13px,#f9c74f 6px,transparent 7px);
+    background-size:96px 26px;background-repeat:repeat-x;}
+  .garland.bottom{transform:scaleY(-1)}
+
+  /* ---------- header / hero ---------- */
+  header{text-align:center;padding:34px 20px 8px;background:
+    radial-gradient(ellipse at 50% 0%,#f7e3a1 0%,var(--cream) 60%)}
+  .gopuram{width:150px;height:86px;margin:0 auto 6px;display:block}
+  .lang-toggle{margin:6px auto 14px;display:inline-flex;border:1.5px solid var(--maroon);
+    border-radius:999px;overflow:hidden}
+  .lang-toggle button{border:0;background:transparent;color:var(--maroon);
+    font-family:'Jost',sans-serif;font-weight:600;font-size:14px;padding:7px 18px;cursor:pointer}
+  .lang-toggle button.active{background:var(--maroon);color:var(--cream-2)}
+  .eyebrow{letter-spacing:.35em;text-transform:uppercase;font-size:12px;color:var(--gold);font-weight:600}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(34px,7vw,58px);color:var(--maroon);line-height:1.1;margin:8px 0 2px}
+  h1 .amp{color:var(--mustard)}
+  .te-title{font-size:clamp(20px,4.5vw,30px);color:var(--maroon);margin-bottom:10px}
+  .parents{font-size:15px;color:#6b543a;max-width:640px;margin:0 auto}
+  .parents b{color:var(--maroon)}
+  .divider{width:120px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:18px auto}
+  .om{font-size:22px;color:var(--gold);letter-spacing:.4em}
+
+  /* ---------- countdown ---------- */
+  .countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
+  .cd{background:#fff;border:1px solid #ead9a8;border-radius:12px;min-width:74px;padding:10px 6px;
+    box-shadow:0 2px 8px rgba(122,31,43,.08)}
+  .cd b{display:block;font-family:'Playfair Display',serif;font-size:28px;color:var(--maroon);line-height:1}
+  .cd span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a6d3b}
+
+  /* ---------- sections ---------- */
+  section{max-width:860px;margin:0 auto;padding:28px 20px}
+  h2{font-family:'Playfair Display',serif;text-align:center;color:var(--maroon);
+    font-size:clamp(26px,5vw,34px);margin-bottom:4px}
+  .sub{text-align:center;color:#8a6d3b;font-size:15px;margin-bottom:22px}
+  .card{background:var(--cream-2);border:1px solid #ead9a8;border-radius:16px;
+    padding:26px 24px;box-shadow:0 4px 18px rgba(122,31,43,.07);text-align:center}
+  .card .big{font-family:'Playfair Display',serif;font-size:clamp(22px,4.5vw,28px);color:var(--maroon)}
+  .card p{margin:6px 0}
+  .pill{display:inline-block;background:var(--maroon);color:var(--cream-2);border-radius:999px;
+    padding:5px 16px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .pill.gold{background:var(--mustard);color:#fff}
+
+  /* ---------- events ---------- */
+  .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .event{background:var(--cream-2);border:1px solid #ead9a8;border-radius:14px;padding:20px;
+    box-shadow:0 3px 12px rgba(122,31,43,.06)}
+  .event .date{font-family:'Playfair Display',serif;color:var(--maroon);font-size:19px}
+  .event .time{color:var(--gold);font-weight:600;font-size:14px;letter-spacing:.06em}
+  .event .where{font-size:14px;color:#8a6d3b}
+  .event .te-name{font-size:16px;color:var(--maroon);margin-top:2px}
+
+  /* ---------- rsvp ---------- */
+  form{background:var(--cream-2);border:1px solid #ead9a8;border-radius:16px;padding:26px 24px;
+    box-shadow:0 4px 18px rgba(122,31,43,.07);max-width:560px;margin:0 auto}
+  label{display:block;font-weight:500;margin:14px 0 5px;color:var(--maroon)}
+  input[type=text],input[type=tel],input[type=number],select,textarea{
+    width:100%;padding:11px 12px;border:1.5px solid #dcc48f;border-radius:10px;
+    font-family:'Jost',sans-serif;font-size:16px;background:#fff;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--mustard);border-color:var(--mustard)}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:4px}
+  .checks label{display:flex;align-items:center;gap:8px;font-weight:400;margin:0;color:var(--ink);cursor:pointer}
+  .checks input{accent-color:var(--maroon);width:18px;height:18px}
+  button.submit{width:100%;margin-top:22px;background:var(--maroon);color:var(--cream-2);
+    border:0;border-radius:999px;padding:14px;font-size:17px;font-weight:600;letter-spacing:.04em;
+    font-family:'Jost',sans-serif;cursor:pointer}
+  button.submit:hover{background:var(--maroon-dark)}
+  .note{font-size:13.5px;color:#8a6d3b;text-align:center;margin-top:12px}
+  #thanks{display:none;text-align:center;background:#eef6e9;border:1px solid #b9d8a9;color:var(--green);
+    border-radius:12px;padding:16px;margin-top:18px;font-weight:500}
+
+  footer{text-align:center;padding:10px 20px 30px;color:#8a6d3b;font-size:14px}
+  footer .te{font-size:17px;color:var(--maroon)}
+  @media (max-width:520px){.checks{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="garland"></div>
+
+<header>
+  <!-- simple temple gopuram silhouette -->
+  <svg class="gopuram" viewBox="0 0 150 86" aria-hidden="true">
+    <g fill="#7a1f2b">
+      <rect x="62" y="62" width="26" height="24"/>
+      <rect x="52" y="50" width="46" height="12"/>
+      <rect x="58" y="38" width="34" height="12"/>
+      <rect x="64" y="26" width="22" height="12"/>
+      <rect x="69" y="14" width="12" height="12"/>
+    </g>
+    <g fill="#d9940d">
+      <rect x="48" y="48" width="54" height="2"/>
+      <rect x="54" y="36" width="42" height="2"/>
+      <rect x="60" y="24" width="30" height="2"/>
+      <circle cx="75" cy="8" r="5"/>
+    </g>
+    <rect x="71" y="70" width="8" height="16" fill="#d9940d"/>
+  </svg>
+
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button id="btn-en" class="active" type="button" onclick="setLang('en')">English</button>
+    <button id="btn-te" type="button" onclick="setLang('te')">తెలుగు</button>
+  </div>
+
+  <p class="eyebrow" data-en="Together with their families" data-te="కుటుంబాలతో కలిసి">Together with their families</p>
+  <h1>Vijay <span class="amp">&amp;</span> Navya</h1>
+  <p class="te te-title">మద్దినేని వారి పెళ్లి సందడి</p>
+  <p class="parents">
+    <span data-en="Son of" data-te="కుమారుడు">Son of</span> <b>Nagendra Prasad &amp; Rama Maddineni</b><br>
+    <span data-en="Daughter of" data-te="కూతురు">Daughter of</span> <b>Krishna Prasad &amp; Anitha Bikki</b>
+  </p>
+  <div class="divider"></div>
+  <p class="om">॥ శుభం ॥</p>
+
+  <div class="countdown" id="countdown" aria-label="Countdown to the wedding">
+    <div class="cd"><b id="cd-d">--</b><span data-en="Days" data-te="రోజులు">Days</span></div>
+    <div class="cd"><b id="cd-h">--</b><span data-en="Hours" data-te="గంటలు">Hours</span></div>
+    <div class="cd"><b id="cd-m">--</b><span data-en="Minutes" data-te="నిమిషాలు">Minutes</span></div>
+    <div class="cd"><b id="cd-s">--</b><span data-en="Seconds" data-te="సెకన్లు">Seconds</span></div>
+  </div>
+  <p class="sub" data-en="until we say forever" data-te="మేము శాశ్వతంగా చెప్పే వరకు">until we say forever</p>
+</header>
+
+<section id="wedding">
+  <h2 data-en="The Wedding" data-te="పెళ్లి">The Wedding</h2>
+  <p class="sub" data-en="We can't wait to celebrate with you" data-te="మీతో కలిసి జరుపుకోవడానికి ఎదురుచూస్తున్నాం">We can't wait to celebrate with you</p>
+  <div class="card">
+    <span class="pill" data-en="Wednesday" data-te="బుధవారం">Wednesday</span>
+    <p class="big">December 23, 2026 &middot; 10:21 AM CST</p>
+    <p data-en="Dallas, Texas" data-te="డల్లాస్, టెక్సాస్">Dallas, Texas</p>
+    <p data-en="Followed by lunch at 12:00 PM at the venue" data-te="మధ్యాహ్నం 12:00 గంటలకు విందు">Followed by lunch at 12:00 PM at the venue</p>
+  </div>
+</section>
+
+<section id="events">
+  <h2 data-en="Celebrations" data-te="వేడుకలు">Celebrations</h2>
+  <p class="sub" data-en="Join us for every event" data-te="ప్రతి వేడుకలో మాతో చేరండి">Join us for every event</p>
+  <div class="events">
+    <div class="event">
+      <p class="date">Pellikuthuru</p>
+      <p class="te te-name">పెళ్లికూతురు</p>
+      <p class="time">Dec 20, 2026 &middot; 3:00 PM</p>
+      <p class="where">Dallas, Texas</p>
+    </div>
+    <div class="event">
+      <p class="date">Pellikoduku</p>
+      <p class="te te-name">పెళ్లికొడుకు</p>
+      <p class="time">Dec 20, 2026 &middot; 5:00 PM</p>
+      <p class="where">Dallas, Texas</p>
+    </div>
+    <div class="event">
+      <p class="date">Mehandi</p>
+      <p class="te te-name">మెహందీ</p>
+      <p class="time">Dec 21, 2026 &middot; 5:00 PM</p>
+      <p class="where">Dallas, Texas</p>
+    </div>
+    <div class="event">
+      <p class="date">Haldi</p>
+      <p class="te te-name">హల్దీ</p>
+      <p class="time">Dec 22, 2026 &middot; 11:00 AM</p>
+      <p class="where">Dallas, Texas</p>
+    </div>
+    <div class="event">
+      <p class="date">Vratam</p>
+      <p class="te te-name">వ్రతం</p>
+      <p class="time">Dec 24, 2026 &middot; 9:00 AM</p>
+      <p class="where">Dallas, Texas</p>
+    </div>
+  </div>
+</section>
+
+<section id="rsvp">
+  <h2 data-en="RSVP" data-te="హాజరు తెలపండి">RSVP</h2>
+  <p class="sub" data-en="Please let us know if you can make it" data-te="మీరు రాగలరో దయచేసి తెలపండి">Please let us know if you can make it</p>
+  <form id="rsvp-form">
+    <label for="name" data-en="Your name" data-te="మీ పేరు">Your name</label>
+    <input type="text" id="name" required placeholder="Full name">
+
+    <label for="phone" data-en="Phone (optional)" data-te="ఫోన్ (ఐచ్ఛికం)">Phone (optional)</label>
+    <input type="tel" id="phone" placeholder="+1 ...">
+
+    <label data-en="Which events will you attend?" data-te="మీరు ఏ వేడుకలకు హాజరవుతారు?">Which events will you attend?</label>
+    <div class="checks">
+      <label><input type="checkbox" name="event" value="Wedding — Dec 23, 10:21 AM" checked> <span data-en="Wedding — Dec 23, 10:21 AM" data-te="పెళ్లి — డిసెం 23, 10:21 AM">Wedding — Dec 23, 10:21 AM</span></label>
+      <label><input type="checkbox" name="event" value="Pellikuthuru — Dec 20, 3 PM"> <span data-en="Pellikuthuru — Dec 20, 3 PM" data-te="పెళ్లికూతురు — డిసెం 20, 3 PM">Pellikuthuru — Dec 20, 3 PM</span></label>
+      <label><input type="checkbox" name="event" value="Pellikoduku — Dec 20, 5 PM"> <span data-en="Pellikoduku — Dec 20, 5 PM" data-te="పెళ్లికొడుకు — డిసెం 20, 5 PM">Pellikoduku — Dec 20, 5 PM</span></label>
+      <label><input type="checkbox" name="event" value="Mehandi — Dec 21, 5 PM"> <span data-en="Mehandi — Dec 21, 5 PM" data-te="మెహందీ — డిసెం 21, 5 PM">Mehandi — Dec 21, 5 PM</span></label>
+      <label><input type="checkbox" name="event" value="Haldi — Dec 22, 11 AM"> <span data-en="Haldi — Dec 22, 11 AM" data-te="హల్దీ — డిసెం 22, 11 AM">Haldi — Dec 22, 11 AM</span></label>
+    </div>
+
+    <label for="guests" data-en="Number of guests (including you)" data-te="అతిథుల సంఖ్య (మీతో సహా)">Number of guests (including you)</label>
+    <input type="number" id="guests" min="1" max="10" value="1">
+
+    <label for="message" data-en="Message / blessings (optional)" data-te="సందేశం / ఆశీర్వాదాలు (ఐచ్ఛికం)">Message / blessings (optional)</label>
+    <textarea id="message" rows="3" placeholder="With love..."></textarea>
+
+    <button class="submit" type="submit" data-en="Send RSVP" data-te="RSVP పంపండి">Send RSVP</button>
+    <div id="thanks" data-en="Thank you! Your RSVP will open in WhatsApp — just press send." data-te="ధన్యవాదాలు! మీ RSVP WhatsAppలో తెరవబడుతుంది — పంపండి నొక్కండి.">Thank you! Your RSVP will open in WhatsApp — just press send.</div>
+    <p class="note" data-en="Your RSVP is sent via WhatsApp to the family." data-te="మీ RSVP కుటుంబానికి WhatsApp ద్వారా పంపబడుతుంది.">Your RSVP is sent via WhatsApp to the family.</p>
+  </form>
+</section>
+
+<footer>
+  <p class="te">విజయ్ &amp; నవ్య</p>
+  <p data-en="December 23, 2026 · Dallas, Texas" data-te="డిసెంబర్ 23, 2026 · డల్లాస్, టెక్సాస్">December 23, 2026 &middot; Dallas, Texas</p>
+  <p data-en="We can't wait to celebrate with you!" data-te="మీతో జరుపుకోవడానికి ఎదురుచూస్తున్నాం!">We can't wait to celebrate with you!</p>
+</footer>
+<div class="garland bottom"></div>
+
+<script>
+  // Countdown to the wedding: Dec 23, 2026, 10:21 AM CST (UTC-6)
+  var target = new Date('2026-12-23T10:21:00-06:00').getTime();
+  function tick(){
+    var diff = target - Date.now();
+    if (diff < 0) diff = 0;
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor(diff % 86400000 / 3600000);
+    var m = Math.floor(diff % 3600000 / 60000);
+    var s = Math.floor(diff % 60000 / 1000);
+    document.getElementById('cd-d').textContent = d;
+    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+
+  // English / Telugu toggle
+  function setLang(lang){
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-te').classList.toggle('active', lang === 'te');
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      el.textContent = lang === 'te' ? (el.getAttribute('data-te') || el.getAttribute('data-en'))
+                                     : el.getAttribute('data-en');
+    });
+  }
+
+  // RSVP -> WhatsApp message to the family
+  document.getElementById('rsvp-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var guests = document.getElementById('guests').value;
+    var msg = document.getElementById('message').value.trim();
+    var events = Array.from(document.querySelectorAll('input[name="event"]:checked'))
+                      .map(function(c){ return c.value; });
+    var text = 'RSVP — Vijay & Navya Wedding\n'
+      + 'Name: ' + name + '\n'
+      + (phone ? 'Phone: ' + phone + '\n' : '')
+      + 'Guests: ' + guests + '\n'
+      + 'Events: ' + (events.length ? events.join(', ') : 'None selected') + '\n'
+      + (msg ? 'Message: ' + msg : '');
+    document.getElementById('thanks').style.display = 'block';
+    window.open('https://wa.me/16028138227?text=' + encodeURIComponent(text), '_blank');
+  });
+</script>
+</body>
+</html>
